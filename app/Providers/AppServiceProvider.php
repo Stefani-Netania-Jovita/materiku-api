@@ -26,9 +26,10 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment('production')) {
             URL::forceScheme('https');
         }
+
         Scramble::ignoreDefaultRoutes();
 
-        Gate::define('admin', function (?User $user = null) {
+        Gate::define('viewApiDocs', function (?User $user = null) {
             return true;
         });
     }
