@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
         }
         Scramble::ignoreDefaultRoutes();
 
-        Gate ::define('admin', function (?User $user = null) {
+        Gate::define('admin', function (?User $user = null) {
             return true;
         });
     }
